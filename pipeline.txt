@@ -1,7 +1,7 @@
 1. Mô tả bộ dữ liệu bbc_text_cls.csv
 
-Nguồn: BBC Text Classification Dataset (BBC News Articles)
-Kích thước: ~2,200 văn bản tin tức
+Nguồn: BBC Text Classification Dataset
+Kích thước: hơn 2200 văn bản tin tức
 Cấu trúc file CSV:
 
 Column	Description
@@ -42,11 +42,12 @@ Thực hiện GMM (Gaussian Mixture Model) để khám phá cấu trúc dữ li�
 Giai đoạn 5️: Phân loại (Classification)
 
 Huấn luyện và so sánh hiệu năng 3 mô hình 
-(lần lượt với bộ dữ liệu sạch và bộ đữ liệu sạch giảm chiều để so sánh)
+(lần lượt với bộ dữ liệu sạch và bộ đữ liệu sạch giảm chiều (cả PCA và LSA) để so sánh)
 (tập train - test được chia theo tỷ lệ 8:2)
 
-Multinomial Naive Bayes
+- Multinomial Naive Bayes
+- Decision Tree
+- Logistic Regression
 
-Logistic Regression
-
-Random Forest
+Tính kết quả trên cả 3 bộ vừa so sánh được hiệu quả của 3 mô hình phân loại, 
+vừa so sánh được khả năng giữ lại ngữ nghĩa văn bản sau khi giảm chiều của LSA và PCA
